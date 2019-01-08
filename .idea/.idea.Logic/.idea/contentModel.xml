@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="ConsoleApplication" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ConsoleApplication.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.0" t="Include">
+              <e p="ConsoleApplication.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="Logic" t="IncludeRecursive">
+        <e p="Abstract" t="Include">
+          <e p="AbstractBaseMathOperator.cs" t="Include" />
+          <e p="AbstractConstantMathOperator.cs" t="Include" />
+          <e p="AbstractDubbleMathOperator.cs" t="Include" />
+          <e p="AbstractParser.cs" t="Include" />
+          <e p="AbstractSingleMathOperator.cs" t="Include" />
+        </e>
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Calculators" t="Include">
+          <e p="GausJordan.cs" t="Include" />
+          <e p="NewtonDerivative.cs" t="Include" />
+          <e p="Point.cs" t="Include" />
+          <e p="RiemannSum.cs" t="Include" />
+          <e p="Taylorpolynomial.cs" t="Include" />
+        </e>
+        <e p="Exception" t="Include">
+          <e p="ScalarInvalidValue.cs" t="Include" />
+        </e>
+        <e p="interfaces" t="Include">
+          <e p="IBaseMathOperator.cs" t="Include" />
+          <e p="IDubbleMathOperator.cs" t="Include" />
+          <e p="IParser.cs" t="Include" />
+          <e p="ISingleMathOperator.cs" t="Include" />
+        </e>
+        <e p="Logic.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Logic.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="OperatorFactory.cs" t="Include" />
+        <e p="Operators" t="Include">
+          <e p="AddMathOperator.cs" t="Include" />
+          <e p="ConstantMathOperator.cs" t="Include" />
+          <e p="CosMathOperator.cs" t="Include" />
+          <e p="DevideMathOperator.cs" t="Include" />
+          <e p="EMathOperator.cs" t="Include" />
+          <e p="ExpotentialEOperator.cs" t="Include" />
+          <e p="ExpotentialOperator.cs" t="Include" />
+          <e p="FactorialMathOperator.cs" t="Include" />
+          <e p="LogMathOperator.cs" t="Include" />
+          <e p="MinMathOperator.cs" t="Include" />
+          <e p="MultiplyMathOperator.cs" t="Include" />
+          <e p="PIMathOperator.cs" t="Include" />
+          <e p="SinMathOperator.cs" t="Include" />
+          <e p="VariableXMathOperator.cs" t="Include" />
+        </e>
+        <e p="Probability" t="Include">
+          <e p="ExponentialGenerator.cs" t="Include" />
+          <e p="GraphValueProvider.cs" t="Include" />
+          <e p="INumberGenerator.cs" t="Include" />
+          <e p="PosionGenerator.cs" t="Include" />
+          <e p="UniformGenerator.cs" t="Include" />
+        </e>
+        <e p="StringParser.cs" t="Include" />
+        <e p="Utils" t="Include">
+          <e p="ArrayUtils.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Logic.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="WebView" t="IncludeRecursive">
+        <e p=".bowerrc" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="bower.json" t="Include" />
+        <e p="bundleconfig.json" t="Include" />
+        <e p="Controllers" t="Include">
+          <e p="HomeController.cs" t="Include" />
+        </e>
+        <e p="json" t="Include">
+          <e p="JSONHelper.cs" t="Include" />
+          <e p="JsonModel.cs" t="Include" />
+          <e p="TextModel.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="CalculateViewModel.cs" t="Include" />
+          <e p="ErrorViewModel.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.0" t="Include">
+              <e p="WebView.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Startup.cs" t="Include" />
+        <e p="Views" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Home" t="Include">
+            <e p="About.cshtml" t="Include" />
+            <e p="Calculate.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+            <e p="Error.cshtml" t="Include" />
+          </e>
+        </e>
+        <e p="WebView.csproj" t="IncludeRecursive" />
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include">
+            <e p="site.css" t="Include" />
+            <e p="site.min.css" t="Include" />
+          </e>
+          <e p="favicon.ico" t="Include" />
+          <e p="images" t="Include">
+            <e p="banner1.svg" t="Include" />
+            <e p="banner2.svg" t="Include" />
+            <e p="banner3.svg" t="Include" />
+            <e p="banner4.svg" t="Include" />
+          </e>
+          <e p="js" t="Include">
+            <e p="Chart.min.js" t="Include" />
+            <e p="site.js" t="Include" />
+            <e p="site.min.js" t="Include" />
+          </e>
+          <e p="lib" t="Include">
+            <e p="bootstrap" t="Include">
+              <e p=".bower.json" t="Include" />
+              <e p="dist" t="Include">
+                <e p="css" t="Include">
+                  <e p="bootstrap-theme.css" t="Include" />
+                  <e p="bootstrap-theme.css.map" t="Include" />
+                  <e p="bootstrap-theme.min.css" t="Include" />
+                  <e p="bootstrap-theme.min.css.map" t="Include" />
+                  <e p="bootstrap.css" t="Include" />
+                  <e p="bootstrap.css.map" t="Include" />
+                  <e p="bootstrap.min.css" t="Include" />
+                  <e p="bootstrap.min.css.map" t="Include" />
+                </e>
+                <e p="fonts" t="Include">
+                  <e p="glyphicons-halflings-regular.eot" t="Include" />
+                  <e p="glyphicons-halflings-regular.svg" t="Include" />
+                  <e p="glyphicons-halflings-regular.ttf" t="Include" />
+                  <e p="glyphicons-halflings-regular.woff" t="Include" />
+                  <e p="glyphicons-halflings-regular.woff2" t="Include" />
+                </e>
+                <e p="js" t="Include">
+                  <e p="bootstrap.js" t="Include" />
+                  <e p="bootstrap.min.js" t="Include" />
+                  <e p="npm.js" t="Include" />
+                </e>
+              </e>
+              <e p="LICENSE" t="Include" />
+            </e>
+            <e p="jquery" t="Include">
+              <e p=".bower.json" t="Include" />
+              <e p="dist" t="Include">
+                <e p="jquery.js" t="Include" />
+                <e p="jquery.min.js" t="Include" />
+                <e p="jquery.min.map" t="Include" />
+              </e>
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+            <e p="jquery-validation" t="Include">
+              <e p=".bower.json" t="Include" />
+              <e p="dist" t="Include">
+                <e p="additional-methods.js" t="Include" />
+                <e p="additional-methods.min.js" t="Include" />
+                <e p="jquery.validate.js" t="Include" />
+                <e p="jquery.validate.min.js" t="Include" />
+              </e>
+              <e p="LICENSE.md" t="Include" />
+            </e>
+            <e p="jquery-validation-unobtrusive" t="Include">
+              <e p=".bower.json" t="Include" />
+              <e p="jquery.validate.unobtrusive.js" t="Include" />
+              <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+            </e>
+          </e>
+          <e p="treant" t="Include">
+            <e p="build" t="Include" />
+            <e p="examples" t="Include">
+              <e p="basic-example" t="Include">
+                <e p="basic-example.css" t="Include" />
+                <e p="basic-example.js" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="collapsable" t="Include">
+                <e p="collapsable.css" t="Include" />
+                <e p="collapsable.js" t="Include" />
+                <e p="img" t="Include">
+                  <e p="cheryl.png" t="Include" />
+                  <e p="figgs.png" t="Include" />
+                  <e p="lana.png" t="Include" />
+                  <e p="malory.png" t="Include" />
+                  <e p="pam.png" t="Include" />
+                  <e p="sterling.png" t="Include" />
+                  <e p="woodhouse.png" t="Include" />
+                </e>
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="comments" t="Include">
+                <e p="avatar.jpg" t="Include" />
+                <e p="example8.css" t="Include" />
+                <e p="example8.js" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="connectors" t="Include">
+                <e p="connectors.css" t="Include" />
+                <e p="connectors.js" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="custom-color-plus-scrollbar" t="Include">
+                <e p="custom-color-plus-scrollbar.css" t="Include" />
+                <e p="custom-color-plus-scrollbar.js" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="custom-colored" t="Include">
+                <e p="custom-colored.css" t="Include" />
+                <e p="custom-colored.js" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="evolution-tree" t="Include">
+                <e p="example6.css" t="Include" />
+                <e p="example6.js" t="Include" />
+                <e p="img" t="Include">
+                  <e p="archaebacteria.png" t="Include" />
+                  <e p="bonyfish.png" t="Include" />
+                  <e p="cartilaginousfish.png" t="Include" />
+                  <e p="chelirates.png" t="Include" />
+                  <e p="cnidarians.png" t="Include" />
+                  <e p="cvijece1.png" t="Include" />
+                  <e p="cvijece2.png" t="Include" />
+                  <e p="ferns.png" t="Include" />
+                  <e p="flatare.png" t="Include" />
+                  <e p="fungi.png" t="Include" />
+                  <e p="greenalgae.png" t="Include" />
+                  <e p="insekti.png" t="Include" />
+                  <e p="kornjaca.png" t="Include" />
+                  <e p="lophoprates.png" t="Include" />
+                  <e p="mosculs.png" t="Include" />
+                  <e p="mosses.png" t="Include" />
+                  <e p="ne_cvijece.png" t="Include" />
+                  <e p="protoctis.png" t="Include" />
+                  <e p="ptica.png" t="Include" />
+                  <e p="rak.png" t="Include" />
+                  <e p="rotfiers.png" t="Include" />
+                  <e p="roundworms.png" t="Include" />
+                  <e p="segmentedworms.png" t="Include" />
+                  <e p="slon.png" t="Include" />
+                  <e p="spuzva.png" t="Include" />
+                  <e p="truebacteria.png" t="Include" />
+                  <e p="zaba.png" t="Include" />
+                  <e p="zmijurina.png" t="Include" />
+                  <e p="zvezda.png" t="Include" />
+                </e>
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="headshots" t="Include">
+                <e p="1.jpg" t="Include" />
+                <e p="10.jpg" t="Include" />
+                <e p="11.jpg" t="Include" />
+                <e p="2.jpg" t="Include" />
+                <e p="4.jpg" t="Include" />
+                <e p="5.jpg" t="Include" />
+                <e p="6.jpg" t="Include" />
+                <e p="7.jpg" t="Include" />
+                <e p="8.jpg" t="Include" />
+                <e p="9.jpg" t="Include" />
+              </e>
+              <e p="no-parent" t="Include">
+                <e p="index.html" t="Include" />
+                <e p="no-parent.css" t="Include" />
+                <e p="no-parent.js" t="Include" />
+              </e>
+              <e p="simple-scrollbar" t="Include">
+                <e p="index.html" t="Include" />
+                <e p="simple-scrollbar.css" t="Include" />
+                <e p="simple-scrollbar.js" t="Include" />
+              </e>
+              <e p="super-simple" t="Include">
+                <e p="index.html" t="Include" />
+                <e p="super-simple.css" t="Include" />
+                <e p="super-simple.js" t="Include" />
+              </e>
+              <e p="tennis-draw" t="Include">
+                <e p="example7.css" t="Include" />
+                <e p="example7.js" t="Include" />
+                <e p="flags" t="Include">
+                  <e p="arg.jpg" t="Include" />
+                  <e p="aus.jpg" t="Include" />
+                  <e p="can.jpg" t="Include" />
+                  <e p="esp.jpg" t="Include" />
+                  <e p="fin.jpg" t="Include" />
+                  <e p="fra.jpg" t="Include" />
+                  <e p="lat.jpg" t="Include" />
+                  <e p="rus.jpg" t="Include" />
+                  <e p="slo.jpg" t="Include" />
+                  <e p="srb.jpg" t="Include" />
+                  <e p="ukr.jpg" t="Include" />
+                  <e p="usa.jpg" t="Include" />
+                </e>
+                <e p="index.html" t="Include" />
+                <e p="trophy.png" t="Include" />
+              </e>
+              <e p="test_ground" t="Include">
+                <e p="example_configs.js" t="Include" />
+                <e p="image.png" t="Include" />
+                <e p="index.css" t="Include" />
+                <e p="index.html" t="Include" />
+                <e p="slika-manja.jpg" t="Include" />
+              </e>
+              <e p="timeline" t="Include">
+                <e p="index.html" t="Include" />
+                <e p="timeline.css" t="Include" />
+                <e p="timeline.js" t="Include" />
+              </e>
+            </e>
+            <e p="LICENSE" t="Include" />
+            <e p="package.json" t="Include" />
+            <e p="README.md" t="Include" />
+            <e p="Treant.css" t="Include" />
+            <e p="Treant.js" t="Include" />
+            <e p="vendor" t="Include">
+              <e p="jquery.easing.js" t="Include" />
+              <e p="jquery.min.js" t="Include" />
+              <e p="jquery.mousewheel.js" t="Include" />
+              <e p="perfect-scrollbar" t="Include">
+                <e p="perfect-scrollbar.css" t="Include" />
+                <e p="perfect-scrollbar.js" t="Include" />
+              </e>
+              <e p="raphael.js" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2017.2/resharper-host/local/Transient/ReSharperHost/v10/SolutionCaches/_Logic.-1475522090.00" t="ExcludeRecursive" />
+  </component>
+  <component name="RiderRiderContentModelStore">
+    <excludedPaths />
+  </component>
+</project>
