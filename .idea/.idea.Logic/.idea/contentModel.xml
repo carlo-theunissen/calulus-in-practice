@@ -15,66 +15,22 @@
         <e p="Program.cs" t="Include" />
       </e>
       <e p="Logic" t="IncludeRecursive">
-        <e p="Abstract" t="Include">
-          <e p="AbstractBaseMathOperator.cs" t="Include" />
-          <e p="AbstractConstantMathOperator.cs" t="Include" />
-          <e p="AbstractDubbleMathOperator.cs" t="Include" />
-          <e p="AbstractParser.cs" t="Include" />
-          <e p="AbstractSingleMathOperator.cs" t="Include" />
-        </e>
-        <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Calculators" t="Include">
-          <e p="GausJordan.cs" t="Include" />
-          <e p="NewtonDerivative.cs" t="Include" />
-          <e p="Point.cs" t="Include" />
-          <e p="RiemannSum.cs" t="Include" />
-          <e p="Taylorpolynomial.cs" t="Include" />
-        </e>
-        <e p="Exception" t="Include">
-          <e p="ScalarInvalidValue.cs" t="Include" />
-        </e>
-        <e p="interfaces" t="Include">
-          <e p="IBaseMathOperator.cs" t="Include" />
-          <e p="IDubbleMathOperator.cs" t="Include" />
-          <e p="IParser.cs" t="Include" />
-          <e p="ISingleMathOperator.cs" t="Include" />
+        <e p="Graph" t="Include">
+          <e p="BFS.cs" t="Include" />
+          <e p="GraphGenerator.cs" t="Include" />
+          <e p="ProbCalculator.cs" t="Include" />
         </e>
         <e p="Logic.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="Node.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
               <e p="Logic.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
-        </e>
-        <e p="OperatorFactory.cs" t="Include" />
-        <e p="Operators" t="Include">
-          <e p="AddMathOperator.cs" t="Include" />
-          <e p="ConstantMathOperator.cs" t="Include" />
-          <e p="CosMathOperator.cs" t="Include" />
-          <e p="DevideMathOperator.cs" t="Include" />
-          <e p="EMathOperator.cs" t="Include" />
-          <e p="ExpotentialEOperator.cs" t="Include" />
-          <e p="ExpotentialOperator.cs" t="Include" />
-          <e p="FactorialMathOperator.cs" t="Include" />
-          <e p="LogMathOperator.cs" t="Include" />
-          <e p="MinMathOperator.cs" t="Include" />
-          <e p="MultiplyMathOperator.cs" t="Include" />
-          <e p="PIMathOperator.cs" t="Include" />
-          <e p="SinMathOperator.cs" t="Include" />
-          <e p="VariableXMathOperator.cs" t="Include" />
-        </e>
-        <e p="Probability" t="Include">
-          <e p="ExponentialGenerator.cs" t="Include" />
-          <e p="GraphValueProvider.cs" t="Include" />
-          <e p="INumberGenerator.cs" t="Include" />
-          <e p="PosionGenerator.cs" t="Include" />
-          <e p="UniformGenerator.cs" t="Include" />
-        </e>
-        <e p="StringParser.cs" t="Include" />
-        <e p="Utils" t="Include">
-          <e p="ArrayUtils.cs" t="Include" />
         </e>
       </e>
       <e p="Logic.sln" t="IncludeFlat" />
@@ -88,11 +44,6 @@
         <e p="bundleconfig.json" t="Include" />
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
-        </e>
-        <e p="json" t="Include">
-          <e p="JSONHelper.cs" t="Include" />
-          <e p="JsonModel.cs" t="Include" />
-          <e p="TextModel.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="CalculateViewModel.cs" t="Include" />

@@ -4,42 +4,26 @@
         <link rel="stylesheet" href="~/css/site.css"/>
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
         <script src="https://unpkg.com/d3@3/d3.min.js"></script>
-        <script src="https://unpkg.com/function-plot@1/dist/function-plot.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
 </head>
 <body>
 <div class="formulaContainer">
         <form method="get" asp-action="Calculate" asp-controller="Home">
+
+                
                 <div class="form-group">
-                        <label for="exampleInputEmail1">Formula</label>
-                        <input autofocus type="text" value="@ViewData["input"]" name="formula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter formula">
-                        <small id="emailHelp" class="form-text text-muted">Please use ASCII format</small>
+                        <label for="exampleInputEmail1">Nodes</label>
+                        <input type="number" value="@(Model.Request.Request.Query["nodes"] ?? "10")" name="nodes" class="form-control" id="exampleInputEmail1" >
                 </div>
                 
                 <div class="form-group">
-                        <label for="exampleInputEmail1">Taylor polynoom around</label>
-                        <input type="number" value="@(Model.Request.Request.Query["taylorAround"] ?? "1")" name="taylorAround" class="form-control" id="exampleInputEmail1" >
+                        <label for="exampleInputEmail1">Prob</label>
+                        <input type="text" value="@(Model.Request.Request.Query["prob"] ?? "0.9")" name="prob" min="0" class="form-control" id="exampleInputEmail1" >
                 </div>
                 
-                <div class="form-group">
-                        <label for="exampleInputEmail1">Taylor polynoom N</label>
-                        <input type="number" value="@(Model.Request.Request.Query["taylorN"] ?? "5")" name="taylorN" min="0" class="form-control" id="exampleInputEmail1" >
-                </div>
-                
-                <div class="form-group">
-                        <label for="exampleInputEmail1">Integral start</label>
-                        <input type="number" value="@(Model.Request.Request.Query["startIntegral"] ?? "0")" name="startIntegral" min="0" class="form-control" id="exampleInputEmail1" >
-                </div>
-                
-                <div class="form-group">
-                        <label for="exampleInputEmail1">Integral End</label>
-                        <input type="number" value="@(Model.Request.Request.Query["endIntegral"] ?? "1")" name="endIntegral" min="0" class="form-control" id="exampleInputEmail1" >
-                </div>
-                <div class="form-group">
-                        <label for="exampleInputEmail1">Points</label>
-                        <input autofocus type="text" value="@(Model.Request.Request.Query["points"] ?? "0,3 ; 5,5")" name="points" class="form-control" id="exampleInputEmail1" aria-describedby="pointsHelp" placeholder=" 0,3 ; 5,3">
-                        <small id="pointsHelp" class="form-text text-muted">Please use format</small>
-                </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 </div>
