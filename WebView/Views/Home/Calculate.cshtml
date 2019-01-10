@@ -1,178 +1,67 @@
 ﻿@model CalculateViewModel
-@{
-    ViewData["input"] = Model.Original;
+@for (var i = 0; i < Model.graph.Count; i++)
+{
+    <div class="formulaContainer">
+        <canvas id="plot@(i)" height="340" width="680">
+        </canvas>
+    </div>
 }
-<div class="formulaContainer">
-    <div class="form-group">
-        <label for="properFormat">Original <span class="color" style="color: red">red</span></label>
-        <input disabled="" class="form-control" id="properFormat" value="@Model.NiceFormat">
-    </div>
-    <form method="get" asp-action="Calculate" asp-controller="Home">
-        <div class="form-group">
-            <input type="hidden" value="@Model.Original" name="formula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter formula">
-        </div>
-        <button type="submit" class="btn btn-outline-primary small">Run</button>
-    </form>
-</div>
 
-<div class="formulaContainer">
-    <div class="form-group">
-        <label for="properFormat">Derivative <span class="color" style="color: blue">blue</span></label>
-        <input disabled="" class="form-control" id="properFormat" value="@Model.DerivativeNiceFormat">
-    </div>
-</div>
-
-<div class="formulaContainer">
-    <div class="form-group">
-        <label for="properFormat">Taylor Poloynoom around @Model.TaylorPoloynoomAround <span class="color" style="color: purple">purple</span></label>
-        <input disabled="" class="form-control" id="properFormat" value="@Model.TaylorPoloynoomNiceFormat">
-    </div>
-</div>
-
-<div class="formulaContainer">
-    <div class="form-group">
-        <label for="properFormat">MC Clairen Poloynoom <span class="color" style="color: orange">orange</span></label>
-        <input disabled="" class="form-control" id="properFormat" value="@Model.McClairenPoloynoomNiceFormat">
-    </div>
-</div>
-
-<div class="formulaContainer">
-    <div class="form-group">
-        <label for="properFormat">Integral between @Model.IntegralStart and @Model.IntegralEnd</label>
-        <input disabled="" class="form-control" id="properFormat" value="@Model.IntegralSum">
-    </div>
-</div>
-
-<div class="formulaContainer">
-    <div class="form-group">
-        @if (Model.GausJordonFault)
-        {
-            <label for="properFormat">Point formula</label>
-            <p>Not possible</p>
-        }
-        else
-        {
-            <label for="properFormat">Point formula <span class="color" style="color: yellow">orange</span></label>
-            <input disabled="" class="form-control" id="properFormat" value="@Model.GausJordon">
-        }
-    </div>
-</div>
-<div class="formulaContainer">
-    <div id="plot">
-    </div>
-</div>
-
-<script type="text/javascript">
-    var f = [];
-    function factorial (n) {
-        if (n === 0 || n === 1)
-            return 1;
-        if (f[n] > 0)
-            return f[n];
-        return f[n] = factorial(n-1) * n;
-    }
-    functionPlot({
-        target: '#plot',
-        width: 700,
-        tip: {
-            renderer: function() {}
-        },
-        data: [{
-                color: 'red',
-                fn: '@Html.Raw(Model.NiceFormat)'
-            },
+@for (var x = 0; x < Model.graph.Count; x++)
+{
+    <script>
+        var test = @Model.graph[x].Length;
+        var ctx = document.getElementById("plot@(x)").getContext('2d');
+        var myBarChart = new Chart(ctx,
             {
-                color: 'red',
-                fn: '@Html.Raw(Model.NiceFormat)',
-                range: [@Model.IntegralStart, @Model.IntegralEnd],
-                closed: true
-            },{
-                color: 'blue',
-                fn: '@Html.Raw(Model.DerivativeNiceFormat)'
-            },
-            {
-                color: 'purple',
-                fn: '@Html.Raw(Model.TaylorPoloynoomNiceFormat)'
-            },
-            {
-                color: 'pink',
-                fn: '@Html.Raw(Model.McClairenPoloynoomNiceFormat)'
-            },
-            {
-                color: 'black',
-                points: @Html.Raw(Model.DerivativePointJson),
-                fnType: 'points',
-                graphType: 'polyline'
-            },
-            {
-                color: 'yellow',
-                fn: '@Html.Raw(Model.GausJordon)',
-            },
-        ]
-    })
-</script>
+                type: 'bar',
+                data: {
+                    labels: [@for (var i = 0; i < Model.graph[x].Length; i++)
+                             {
+                                 if (Model.graph[x][i] > 0)
+                                 {
+                                     @Html.Raw(i + ",")
+                                     ;
+                                 }
+                             }],
+                    datasets: [
+                        {
+                            label: '',
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132,)',
+                            //data: [12, 19, 3, 5, 2, 3,12, 19, 3, 5, 2, 3,],      
+                            data: [@for (var i = 0; i < Model.graph[x].Length; i++)
+                                   {
+                                       if (Model.graph[x][i] > 0)
+                                       {
+                                           @Html.Raw(Model.graph[x][i] + ",")
+                                           ;
+                                       }
+                                   }],
 
-<script>
-    var ctx = document.getElementById("myChart");
-    var data = {
-        labels: [1, 2, 3, 4, 5],
-        datasets: [{
-                label: "PDF",
-                function: function(x) {
-                    return x
+                        }
+                    ]
                 },
-                borderColor: "rgba(75, 192, 192, 1)",
-                data: [],
-                fill: false
-            },
-            {
-                label: "f(x) = x²",
-                function: function(x) {
-                    return x * x
-                },
-                borderColor: "rgba(153, 102, 255, 1)",
-                data: [],
-                fill: false
-            },
-            {
-                label: "f(x) = x * log(x)",
-                function: function(x) {
-                    return x * Math.log(x)
-                },
-                borderColor: "rgba(255, 206, 86, 1)",
-                data: [],
-                fill: false
-            }
-        ]
-    };
-/*
-    Chart.pluginService.register({
-        beforeInit: function(chart) {
-            var data = chart.config.data;
-            for (var i = 0; i < data.datasets.length; i++) {
-                for (var j = 0; j < data.labels.length; j++) {
-                    var fct = data.datasets[i].function,
-                        x = data.labels[j],
-                        y = fct(x);
-                    data.datasets[i].data.push(y);
-                }
-            }
-        }
-    });
-
-    var myBarChart = new Chart(ctx, {
-        type: 'line',
-        data: data,
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        yAxes: [
+                            {
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }
+                        ],
+                        XAxes: [
+                            {
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }
+                        ]
                     }
-                }]
-            }
-        }
-    });
-    */
-</script>
+                }
+            });
 
+    </script>
+}

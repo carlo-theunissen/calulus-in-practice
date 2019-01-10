@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using Logic;
-using Logic.Calculators;
+using Logic.Probability;
 
 
 namespace ConsoleApplication
@@ -15,21 +12,11 @@ namespace ConsoleApplication
             {
                 Console.WriteLine("Hello World!");
 
-                var list = new List<Point>();
-                list.Add(new Point(){ X = 7, Y = 3});
-                list.Add(new Point(){ X = 5, Y = 6});
-                list.Add(new Point(){ X = 2, Y = 7});
-                var mat = GausJordan.GetMatrixFromPoints(list);
-                var ys = GausJordan.GetAnwsersFromPoints(list);
-                
-                var ans = GausJordan.GetValues(mat, ys);
-                
-                foreach (var an in ans)
+                var numbers = new BasicGraph(new PosionGenerator(10000, 0.5f), 100);
+                foreach (var step in numbers.GetSteps())
                 {
-                    Console.WriteLine(an);
+                       Console.WriteLine(step);
                 }
-                
-                Console.WriteLine(GausJordan.GetBaseMathOperatorFromValues(ans).DeepSimplyfy().ToMathString());
             }
             catch (Exception e)
             {

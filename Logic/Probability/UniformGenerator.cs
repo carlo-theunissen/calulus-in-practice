@@ -16,7 +16,9 @@ namespace Logic.Probability
         }
         public int GetNext()
         {
-            return random.Next() * (_end - _start) + _start;
+            double test =random.NextDouble() * (_end - _start) + _start;
+            
+            return (int) test;
         }
     }
 }

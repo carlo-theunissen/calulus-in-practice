@@ -1,15 +1,17 @@
-﻿namespace Logic.Probability
+﻿using System;
+
+namespace Logic.Probability
 {
     public class PosionGenerator : INumberGenerator
     {
         private int _tries;
         private int _lambda;
         private UniformGenerator _generator;
-        public PosionGenerator(int tries, int lambda)
+        public PosionGenerator(int tries, double lambda)
         {
             _tries = tries;
-            _lambda = lambda * 100;
-            _generator = new UniformGenerator(0, 100);
+            _lambda = (int) Math.Round(lambda * 100);
+            _generator = new UniformGenerator(0, 1000);
         }
 
         public int GetNext()

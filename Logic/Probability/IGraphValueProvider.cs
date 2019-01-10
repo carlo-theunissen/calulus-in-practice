@@ -2,7 +2,6 @@
 {
     public interface IGraphValueProvider
     {
-        int GetSteps();
-        int GetStepValue(int x);
+        int[] GetSteps();
     }
 }
