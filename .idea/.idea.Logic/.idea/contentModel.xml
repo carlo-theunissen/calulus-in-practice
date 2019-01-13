@@ -90,6 +90,7 @@
           <e p="HomeController.cs" t="Include" />
         </e>
         <e p="json" t="Include">
+          <e p="JsonCreator.cs" t="Include" />
           <e p="JSONHelper.cs" t="Include" />
           <e p="JsonModel.cs" t="Include" />
           <e p="TextModel.cs" t="Include" />

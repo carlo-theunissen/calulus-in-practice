@@ -11,7 +11,7 @@ namespace Logic.Operators
         public PIMathOperator() : base(Math.PI){}
         public override string MathSymbol()
         {
-            return "pi";
+            return "PI";
         }
     }
 }

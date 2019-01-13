@@ -18,5 +18,6 @@
 
         public bool GausJordonFault { get; set; }
         public object Request { get; set; }
+        public string JsonData { get; set; }
     }
 }

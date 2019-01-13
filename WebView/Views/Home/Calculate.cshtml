@@ -62,6 +62,8 @@
     </div>
 </div>
 
+<div class="formulaContainer Treant" id="simpleContainer"></div>
+
 <script type="text/javascript">
     var f = [];
     function factorial (n) {
@@ -174,5 +176,18 @@
         }
     });
     */
+</script>
+
+<script>
+    window.onload = function() {
+        var simple = {
+            chart: {
+                container: "#simpleContainer"
+            },
+
+            nodeStructure: @Html.Raw(Model.JsonData)
+        };
+        new Treant(simple);
+    };
 </script>
 

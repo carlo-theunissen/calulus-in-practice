@@ -62,6 +62,10 @@ namespace WebView.Controllers
             {
                 model.GausJordonFault = true;
             }
+            
+            var json = JsonCreator.CreateFromBaseOpeator(result);
+            model.JsonData = JsonConvert.SerializeObject(json);
+            
             return View(model);
         }
 
