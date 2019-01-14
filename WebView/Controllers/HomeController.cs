@@ -65,6 +65,8 @@ namespace WebView.Controllers
             
             var json = JsonCreator.CreateFromBaseOpeator(result);
             model.JsonData = JsonConvert.SerializeObject(json);
+
+            model.TaylorPossible = model.McClairenPoloynoomNiceFormat.IndexOf("NaN", StringComparison.Ordinal) >= 0 || model.TaylorPoloynoomNiceFormat.IndexOf("NaN", StringComparison.Ordinal) >=0 ;
             
             return View(model);
         }

@@ -15,6 +15,7 @@
         public double IntegralSum;
 
         public string GausJordon;
+        public bool TaylorPossible;
 
         public bool GausJordonFault { get; set; }
         public object Request { get; set; }

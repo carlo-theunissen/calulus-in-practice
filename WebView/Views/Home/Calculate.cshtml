@@ -92,13 +92,14 @@
                 color: 'blue',
                 fn: '@Html.Raw(Model.DerivativeNiceFormat)'
             },
+            
             {
                 color: 'purple',
-                fn: '@Html.Raw(Model.TaylorPoloynoomNiceFormat)'
+                fn: '@Html.Raw(Model.TaylorPossible ? "0" : Model.TaylorPoloynoomNiceFormat)'
             },
             {
                 color: 'pink',
-                fn: '@Html.Raw(Model.McClairenPoloynoomNiceFormat)'
+                fn: '@Html.Raw(Model.TaylorPossible ? "0" : Model.McClairenPoloynoomNiceFormat)'
             },
             {
                 color: 'black',
